@@ -1,3 +1,6 @@
+// 一些工具函数
+
+// 模板的{{}}的替换方法
 function tplReplace (template, templateObject) {
   return template().replace(/\{\{(.*?)\}\}/g, (node, key) => {
     return templateObject[key.trim()];

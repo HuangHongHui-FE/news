@@ -1,9 +1,13 @@
 import HTTP from '../libs/http';
 import { setPageData } from '../libs/utils';
 
+// 继承封装的http类
+
 class Service extends HTTP {
+  // 获取其数据
   getNewsList (type, count) {
     return new Promise((resolve, reject) => {
+      // 调用http.js里面的方法
       this.ajax({
         url: 'Juhe/getNewsList',
         type: 'POST',
